@@ -22,7 +22,7 @@ const Login: React.FC = () => {
     setLoading(true);
 
     try {
-      const response = await fetch("http://localhost:8080/auth/login", {
+      const response = await fetch("http://zwoos4skcg44s0w8wg0gcosc.172.105.51.44.sslip.io/auth/login", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
