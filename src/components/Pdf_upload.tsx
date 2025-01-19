@@ -20,7 +20,7 @@ function Pdf_upload() {
         try {
           console.log("Fetching user ID with token:", token); // Log token before making request
           const response = await axios.get(
-            "http://127.0.0.1:8080/auth/user/me",
+            "http://zwoos4skcg44s0w8wg0gcosc.172.105.51.44.sslip.io/auth/user/me",
             {
               headers: { Authorization: `Bearer ${token}` },
             }
@@ -66,8 +66,8 @@ function Pdf_upload() {
 
     const endpoint =
       selectedFileType === "pdf"
-        ? "http://127.0.0.1:8080/summarize_pdf/"
-        : "http://127.0.0.1:8080/summarize_ppt/";
+        ? "http://zwoos4skcg44s0w8wg0gcosc.172.105.51.44.sslip.io/summarize_pdf/"
+        : "http://zwoos4skcg44s0w8wg0gcosc.172.105.51.44.sslip.io/summarize_ppt/";
 
     try {
       setLoading(true);
@@ -99,8 +99,8 @@ function Pdf_upload() {
 
     const endpoint =
       selectedFileType === "pdf"
-        ? "http://127.0.0.1:8080/gen_ques_pdf"
-        : "http://127.0.0.1:8080/gen_ques_ppt";
+        ? "http://zwoos4skcg44s0w8wg0gcosc.172.105.51.44.sslip.io/gen_ques_pdf"
+        : "http://zwoos4skcg44s0w8wg0gcosc.172.105.51.44.sslip.io/gen_ques_ppt";
 
     try {
       setLoading(true);
