@@ -39,7 +39,7 @@ const Registration: React.FC = () => {
     console.log("Payload being sent:", payload);
 
     try {
-      const response = await fetch("http://localhost:8080/register", {
+      const response = await fetch("http://zwoos4skcg44s0w8wg0gcosc.172.105.51.44.sslip.io/register", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
