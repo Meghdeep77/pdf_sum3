@@ -20,7 +20,7 @@ function Pdf_upload() {
         try {
           console.log("Fetching user ID with token:", token); // Log token before making request
           const response = await axios.get(
-            "http://127.0.0.1:8080/auth/user/me",
+            "https://defmogu.in/auth/user/me",
             {
               headers: { Authorization: `Bearer ${token}` },
             }
@@ -66,8 +66,8 @@ function Pdf_upload() {
 
     const endpoint =
       selectedFileType === "pdf"
-        ? "http://127.0.0.1:8080/summarize_pdf/"
-        : "http://127.0.0.1:8080/summarize_ppt/";
+        ? "https://defmogu.in/summarize_pdf/"
+        : "https://defmogu.in/summarize_ppt/";
 
     try {
       setLoading(true);
@@ -103,8 +103,8 @@ function Pdf_upload() {
 
     const endpoint =
       selectedFileType === "pdf"
-        ? "http://127.0.0.1:8080/gen_ques_pdf"
-        : "http://127.0.0.1:8080/gen_ques_ppt";
+        ? "https://defmogu.in/gen_ques_pdf"
+        : "https://defmogu.in/gen_ques_ppt";
 
     try {
       setLoading(true);
