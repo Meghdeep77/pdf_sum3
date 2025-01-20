@@ -4,7 +4,7 @@ import { Route, Redirect } from "react-router-dom";
 // Function to check if the token is valid (via server)
 const isTokenExpired = async (token: string): Promise<boolean> => {
   try {
-    const response = await fetch("https://defmogu.in/auth/user/me", {
+    const response = await fetch("http://localhost:8080/auth/user/me", {
       method: "GET",
       headers: {
         Authorization: `Bearer ${token}`, // Send the token to the server

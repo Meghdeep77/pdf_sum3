@@ -20,7 +20,7 @@ function Pdf_upload() {
         try {
           console.log("Fetching user ID with token:", token); // Log token before making request
           const response = await axios.get(
-            "https://defmogu.in/auth/user/me",
+            "http://127.0.0.1:8080/auth/user/me",
             {
               headers: { Authorization: `Bearer ${token}` },
             }
@@ -66,8 +66,8 @@ function Pdf_upload() {
 
     const endpoint =
       selectedFileType === "pdf"
-        ? "https://defmogu.in/summarize_pdf/"
-        : "https://defmogu.in/summarize_ppt/";
+        ? "http://127.0.0.1:8080/summarize_pdf/"
+        : "http://127.0.0.1:8080/summarize_ppt/";
 
     try {
       setLoading(true);
@@ -93,14 +93,18 @@ function Pdf_upload() {
       alert("Please select a file first!");
       return;
     }
-
+    if (!userId) {
+      alert("Invalid User");
+      return;
+    }
     const formData = new FormData();
     formData.append("file", file);
+    formData.append("user_id", userId.toString());
 
     const endpoint =
       selectedFileType === "pdf"
-        ? "https://defmogu.in/gen_ques_pdf"
-        : "https://defmogu.in/gen_ques_ppt";
+        ? "http://127.0.0.1:8080/gen_ques_pdf"
+        : "http://127.0.0.1:8080/gen_ques_ppt";
 
     try {
       setLoading(true);
@@ -108,7 +112,8 @@ function Pdf_upload() {
         headers: { "Content-Type": "multipart/form-data" },
       });
 
-      setQuestions(response.data.summary);
+      setQuestions(response.data.questions);
+      console.log("Questions: ", response.data.questions);
       setSummary("");
     } catch (error) {
       console.error(
@@ -203,6 +208,15 @@ function Pdf_upload() {
     <div className="container mx-auto p-5 max-w-3xl">
       <h1 className="text-center text-3xl font-bold mb-5">File Processor</h1>
 
+      {/* Notice Section */}
+      <div className="bg-yellow-100 text-yellow-800 p-3 rounded-md mb-5 border border-yellow-300">
+        <p>
+          <strong>Note:</strong> PDFs must contain text content and not images
+          of text (e.g., scanned documents). Ensure your file meets this
+          requirement for accurate processing.
+        </p>
+      </div>
+
       <div className="flex justify-center gap-4 mb-4">
         <select
           className="p-3 border border-gray-300 rounded-md"
@@ -287,5 +301,4 @@ function Pdf_upload() {
     </div>
   );
 }
-
 export default Pdf_upload;
