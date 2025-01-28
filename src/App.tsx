@@ -10,6 +10,7 @@ import AboutPage from "./pages/AboutPage";
 import ContactPage from "./pages/ContactPage";
 import LoginPage from "./pages/LoginPage";
 import RegisterPage from "./pages/RegisterPage";
+import PricingPage from "./pages/PricingPage";
 function App() {
   const [count, setCount] = useState(0);
 
@@ -25,6 +26,7 @@ function App() {
           <Route path="/terms" component={TermsPage} exact />
           <Route path="/about" component={AboutPage} exact />
           <Route path="/contact" component={ContactPage} exact />
+          <Route path="/pricing" component={PricingPage} exact />
         </Switch>
       </div>
     </Router>
