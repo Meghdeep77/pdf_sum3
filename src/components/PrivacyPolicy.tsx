@@ -82,6 +82,16 @@ export default function PrivacyPolicy() {
               </div>
 
               <h2 className="text-2xl font-semibold text-gray-800 mt-8 mb-4">
+                Refund Policy
+              </h2>
+              <p className="text-gray-600 leading-relaxed">
+                PDF_SUM follows a strict No Refund Policy. Once a purchase or
+                subscription has been made, it cannot be refunded under any
+                circumstances. We encourage users to carefully review the
+                features and terms before making any purchases.
+              </p>
+
+              <h2 className="text-2xl font-semibold text-gray-800 mt-8 mb-4">
                 Children's Information
               </h2>
               <p className="text-gray-600 leading-relaxed">
