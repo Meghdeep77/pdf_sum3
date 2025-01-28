@@ -26,6 +26,13 @@ const Header: React.FC = () => {
           >
             Contact
           </a>
+
+          <a
+            href="/pricing"
+            className="text-white text-lg hover:bg-white hover:text-[#0056b3] px-3 py-2 rounded-md transition-colors duration-300"
+          >
+            Pricing
+          </a>
         </nav>
       </div>
     </header>
