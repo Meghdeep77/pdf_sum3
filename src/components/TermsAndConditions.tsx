@@ -16,10 +16,10 @@ export default function TermsAndConditions() {
                 These terms and conditions outline the rules and regulations for
                 the use of PDF_SUM's Website, located at{" "}
                 <a
-                  href="https://pdf-sum3.vercel.app/"
+                  href="https://pdf.defmogu.in/"
                   className="text-blue-600 hover:underline"
                 >
-                  https://pdf-sum3.vercel.app/
+                  https://pdf.defmogu.in/
                 </a>
                 .
               </p>

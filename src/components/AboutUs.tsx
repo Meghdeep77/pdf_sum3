@@ -78,6 +78,9 @@ export default function AboutUs() {
                 Together, let's make exam preparation less about the volume of
                 study and more about understanding and mastering the subject.
               </p>
+              <h2 className="text-2xl font-semibold text-gray-800 mt-8 mb-4">
+                This Website is Owned and Managed by Meghdeep Roychoudhury
+              </h2>
             </section>
           </div>
         </div>
