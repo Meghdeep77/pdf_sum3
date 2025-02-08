@@ -11,6 +11,7 @@ import ContactPage from "./pages/ContactPage";
 import LoginPage from "./pages/LoginPage";
 import RegisterPage from "./pages/RegisterPage";
 import PricingPage from "./pages/PricingPage";
+import PaymentStatus from "./components/PaymentStatus";
 function App() {
   const [count, setCount] = useState(0);
 
@@ -20,6 +21,7 @@ function App() {
         <Switch>
           {/* Define the route and render Summarizer for the root path */}
           <PrivateRoute path="/" component={Summ} exact />
+          <PrivateRoute path="/status" component={PaymentStatus} exact />
           <Route path="/login" component={LoginPage} exact />
           <Route path="/register" component={RegisterPage} exact />
           <Route path="/privacy" component={PolicyPage} exact />

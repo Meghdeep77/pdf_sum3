@@ -24,7 +24,7 @@ export default function Contact() {
                   href="mailto:pdf_sum@gmail.com"
                   className="text-blue-600 hover:underline"
                 >
-                  pdf_sum@gmail.com
+                  PdfSum@gmail.com
                 </a>
               </p>
 

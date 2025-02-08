@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useHistory } from "react-router-dom"; // Import useHistory hook
-
+const apiUrl = import.meta.env.VITE_API_URL;
 const Registration: React.FC = () => {
   const [formData, setFormData] = useState({
     username: "",
@@ -49,7 +49,7 @@ const Registration: React.FC = () => {
     console.log("Payload being sent:", payload);
 
     try {
-      const response = await fetch("https://defmogu.in/register", {
+      const response = await fetch(`${apiUrl}/register`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
