@@ -81,8 +81,8 @@ function Pdf_upload() {
 
     const endpoint =
       selectedFileType === "pdf"
-        ? `${apiUrl}/summarize_pdf`
-        : `${apiUrl}/summarize_ppt`;
+        ? `https://defmogu.in/summarize_pdf`
+        : `https://defmogu.in/summarize_ppt`;
 
     try {
       setLoading(true);
@@ -121,8 +121,8 @@ function Pdf_upload() {
 
     const endpoint =
       selectedFileType === "pdf"
-        ? `${apiUrl}/gen_ques_pdf`
-        : `${apiUrl}/gen_ques_ppt`;
+        ? `https://defmogu.in/gen_ques_pdf`
+        : `https://defmogu.in/gen_ques_ppt`;
 
     try {
       setLoading(true);
